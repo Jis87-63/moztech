@@ -3,9 +3,9 @@
   "builds": [
     {
       "src": "package.json",
-      "use": "@vercel/static-build",
+      "use": "@vercel/next",
       "config": {
-        "distDir": ".next"
+        "outputDirectory": ".next"
       }
     }
   ],
@@ -40,42 +40,10 @@
       ]
     }
   ],
-  "redirects": [
-    {
-      "source": "/pro",
-      "destination": "/pro",
-      "permanent": true
-    },
-    {
-      "source": "/chat",
-      "destination": "/chat",
-      "permanent": true
-    },
-    {
-      "source": "/login",
-      "destination": "/login",
-      "permanent": true
-    },
-    {
-      "source": "/dashboard",
-      "destination": "/dashboard",
-      "permanent": true
-    },
-    {
-      "source": "/terms",
-      "destination": "/terms",
-      "permanent": true
-    },
-    {
-      "source": "/privacy",
-      "destination": "/privacy",
-      "permanent": true
-    }
-  ],
   "rewrites": [
     {
       "source": "/:path*",
-      "destination": "/index.html"
+      "destination": "/"
     }
   ],
   "cleanUrls": true,
